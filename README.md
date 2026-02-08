@@ -28,5 +28,6 @@ username = input("Username: ")
 query = "SELECT * FROM users WHERE username = '" + username + "'"
 cursor.execute(query)
 
-*GenAI Spec Risk Check:*
+**GenAI Spec Risk Check:**
 A travel assistant app that can automatically book flights and hotels, stores user credit card information, and interacts with external APIs.
+
