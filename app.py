@@ -13,7 +13,7 @@ client = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
                                                                )
 
-st.title("🔐 LLM Security Helper")
+st.title("LLM Security Helper")
 
 # Choose analysis mode
 mode = st.radio(
@@ -30,7 +30,7 @@ def analyze(prompt):
         model="gemini-2.5-flash",  # simple, human-readable model
         messages=[{"role": "user", "content": prompt}]
     )
-    # Gemini API returns same structure as OpenAI
+    
     return response.choices[0].message.content
 
 # Button click
@@ -92,4 +92,5 @@ Specification:
 # # Vulnerable API usage
 # api_key = "12345SECRET67890"
 # response = requests.get(f"https://example.com/data?api_key={api_key}")
+
 
